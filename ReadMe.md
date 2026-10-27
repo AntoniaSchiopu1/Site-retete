@@ -1,20 +1,25 @@
-# GUST BUN - Proiect Rețete Web
+# Good Taste - Recipe Web Application
 
-O aplicație web elegantă și modernă dezvoltată în **HTML5**, **CSS3** și **JavaScript**, inspirată din designul clasic de tip revistă culinară gourmet. Proiectul oferă funcționalități avansate precum căutarea rapidă, filtrarea pe categorii curate (inclusiv salate, sosuri și garnituri) și gestionarea rețetelor favorite salvate local în browser.
+A modern, responsive web application built with HTML, CSS, and JavaScript that allows users to search for delicious recipes, explore categories, view detailed instructions, and save their favorite dishes.
 
-## Structura Proiectului
-- `index.html` - Structura paginii, elementele de navigare, formularul de căutare și secțiunile interactive.
-- `style.css` - Designul vizual complet, tonurile cromatice rafinate (bejul cald și vișiniul elegant), tipografia și designul *responsive*.
-- `script.js` - Logica completă: gestionarea rețetelor locale cu imagini proprii de pe calculator, căutarea după denumire/ingredient la apăsarea tastei Enter (cu derulare automată la rezultate), filtrarea pe categorii și sistemul de rețete salvate cu `localStorage`.
-- `ReadMe.md` - Documentația tehnică a proiectului.
+## Features
 
-## Caracteristici Principale
-1. **Design High-End (Maison Culinaire):** Interfață curată, tonuri calde și o experiență vizuală plăcută, de inspirație clasică/vintage.
-2. **Căutare Rapidă și Scroll Automat:** Permite căutarea rețetelor dorite introducând cuvinte în bara de căutare și apăsând butonul sau tasta Enter, ducându-te instantaneu jos la rezultate.
-3. **Categorii Extinse:** Secțiuni curate dedicate pentru *Toate, Pui, Vită, Paste, Desert, Salate, Sosuri și Garnituri*.
-4. **Rețete Salvate:** Poți salva rețetele preferate folosind butonul cu inimioară. Acestea se vor păstra în memorie locală (localStorage) chiar și după reîncărcarea paginii.
-5. **Secțiunea „Despre noi”:** Un mesaj dedicat misiunii de a simplifica gătitul de zi cu zi.
+- **Dynamic Search**: Search for recipes globally using **TheMealDB API**.
+- **Category Filtering**: Explore recipes by categories (Chicken, Beef, Pasta, Dessert, Seafood, Vegetarian, Side, Starter) with strict built-in filters to ensure relevant results (e.g., excluding sandwiches or puddings from pasta).
+- **Detailed Modal View**: Click on any recipe to view its high-resolution image, complete ingredient list, and step-by-step instructions fetched live from the server.
+- **Favorites / Saved Recipes**: Save your favorite recipes using browser `localStorage` so they persist across sessions.
+- **Responsive Design**: Fully adaptable layout optimized for desktops, tablets, and mobile devices using CSS Grid and Flexbox.
 
-## Cum se rulează:
-1. Salvați toate cele 10 imagini locale necesare (`pui1.jpg`, `pui2.jpg`, `vita1.jpg`, `paste1.jpg`, `paste2.jpg`, `desert1.jpg`, `desert2.jpg`, `salata1.jpg`, `sos1.jpg`, `garnitura1.jpg`) și cele 4 fișiere principale (`index.html`, `style.css`, `script.js`, `ReadMe.md`) în același director pe calculator.
-2. Deschideți fișierul `index.html` în orice browser web modern.
+## Technologies Used
+
+- **HTML5**: Semantic structure and layout.
+- **CSS3**: Custom variables, Flexbox, CSS Grid, and responsive media queries.
+- **JavaScript (ES6+)**: Asynchronous operations (`async/await`), DOM manipulation, event handling, and API integration via `fetch`.
+- **TheMealDB API**: External REST API used for fetching recipes and categories.
+- **LocalStorage API**: Client-side data persistence for saved recipes.
+
+## Project Structure
+
+- `index.html` - Main HTML markup and structure.
+- `style.css` - Stylesheet for layout, theme colors, and responsive design.
+- `script.js` - Application logic, API integration, strict category filtering, modal control, and local storage management.
