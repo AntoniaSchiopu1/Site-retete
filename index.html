@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUST BUN</title>
+    <title>GOOD TASTE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigare -->
+    <!-- Navigation -->
     <header class="site-header">
         <div class="logo-container">
             <div class="logo-circle">G</div>
             <div class="logo-text">
-                <span class="brand-title">GUST BUN</span>
+                <span class="brand-title">GOOD TASTE</span>
             </div>
         </div>
         <nav class="main-nav">
-            <a href="#home" class="nav-link active" onclick="showSection('home')">Acasa</a>
-            <a href="#categories" class="nav-link" onclick="showSection('categories')">Categorii</a>
-            <a href="#about" class="nav-link" onclick="showSection('about')">Despre noi</a>
-            <a href="#saved" class="nav-link saved-link" onclick="showSection('saved')">🔖 Salvate (<span id="saved-count">0</span>)</a>
+            <a href="#home" class="nav-link active" onclick="showSection('home')">Home</a>
+            <a href="#categories" class="nav-link" onclick="showSection('categories')">Categories</a>
+            <a href="#about" class="nav-link" onclick="showSection('about')">About us</a>
+            <a href="#saved" class="nav-link saved-link" onclick="showSection('saved')">🔖 Saved (<span id="saved-count">0</span>)</a>
         </nav>
     </header>
 
-    <!-- Secțiunea Principală  -->
+    <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-content">
-            <span class="hero-tag">COLECȚIA NOASTRĂ DE REȚETE</span>
-            <h1 class="hero-title">Arta de a găti frumos.</h1>
-            <p class="hero-description">Rețete alese cu grijă, ingrediente de sezon și plăcerea unei mese care nu se grăbește niciodată.</p>
+            <span class="hero-tag">OUR RECIPE COLLECTION</span>
+            <h1 class="hero-title">The art of beautiful cooking.</h1>
+            <p class="hero-description">Carefully chosen recipes, seasonal ingredients and the pleasure of a meal that is never rushed.</p>
             
-            <!-- Formular de căutare -->
+            <!-- Search Form -->
             <form id="recipe-form" class="search-form">
                 <div class="search-input-wrapper">
                     <span class="search-icon">🔍</span>
                     <input 
                         type="text" 
                         id="search-input" 
-                        placeholder="Ce ai dori să gătești? (ex: pui, vită, paste, salată...)" 
+                        placeholder="What would you like to cook? (ex: chicken, beef, pasta, cake...)" 
                     >
                 </div>
-                <button type="submit" class="search-btn">Caută</button>
+                <button type="submit" class="search-btn">Search</button>
             </form>
         </div>
     </section>
 
-    <!-- Conținut Principal -->
+    <!-- Main Content -->
     <main class="main-container">
 
-        <!-- Pagina Acasa -->
+        <!-- Home Page / Results -->
         <section id="recipes-page" class="page-section">
             <div class="section-header-flex">
                 <div>
-                    <h2 class="section-title" id="results-title">Caută o rețetă</h2>
-                    <p class="section-subtitle">Introdu un cuvânt și apasă pe Caută pentru a afișa preparatele.</p>
+                    <h2 class="section-title" id="results-title">Search for a recipe</h2>
+                    <p class="section-subtitle">Enter a keyword and click Search to display dishes.</p>
                 </div>
             </div>
             <div id="recipes-grid" class="recipes-grid">
@@ -62,53 +62,53 @@
             </div>
         </section>
 
-      
+        <!-- Categories Page -->
         <section id="categories-page" class="page-section" style="display: none;">
             <div class="section-header-flex">
                 <div>
-                    <h2 class="section-title">Categorii de Rețete</h2>
-                    <p class="section-subtitle">Alege o categorie pentru a descoperi preparate delicioase.</p>
+                    <h2 class="section-title">Recipe Categories</h2>
+                    <p class="section-subtitle">Choose a category to discover delicious dishes.</p>
                 </div>
             </div>
             <div class="filter-buttons" style="margin-bottom: 2.5rem; border-bottom: none;">
-                <button class="filter-btn active" data-category="all" onclick="filterByCategory('all')">Toate</button>
-                <button class="filter-btn" data-category="pui" onclick="filterByCategory('pui')">Pui</button>
-                <button class="filter-btn" data-category="vita" onclick="filterByCategory('vita')">Vită</button>
-                <button class="filter-btn" data-category="paste" onclick="filterByCategory('paste')">Paste</button>
-                <button class="filter-btn" data-category="desert" onclick="filterByCategory('desert')">Desert</button>
-                <button class="filter-btn" data-category="salate" onclick="filterByCategory('salate')">Salate</button>
-                <button class="filter-btn" data-category="sosuri" onclick="filterByCategory('sosuri')">Sosuri</button>
-                <button class="filter-btn" data-category="garnituri" onclick="filterByCategory('garnituri')">Garnituri</button>
+                <button class="filter-btn active" data-category="Chicken" onclick="filterByCategory('Chicken')">Chicken</button>
+                <button class="filter-btn" data-category="Beef" onclick="filterByCategory('Beef')">Beef</button>
+                <button class="filter-btn" data-category="Pasta" onclick="filterByCategory('Pasta')">Pasta</button>
+                <button class="filter-btn" data-category="Dessert" onclick="filterByCategory('Dessert')">Dessert</button>
+                <button class="filter-btn" data-category="Seafood" onclick="filterByCategory('Seafood')">Seafood</button>
+                <button class="filter-btn" data-category="Vegetarian" onclick="filterByCategory('Vegetarian')">Vegetarian</button>
+                <button class="filter-btn" data-category="Side" onclick="filterByCategory('Side')">Side</button>
+                <button class="filter-btn" data-category="Starter" onclick="filterByCategory('Starter')">Starter</button>
             </div>
             <div id="categories-grid" class="recipes-grid">
                 
             </div>
         </section>
 
-       
+        <!-- About Page -->
         <section id="about-page" class="page-section about-section" style="display: none;">
             <div class="about-content">
-                <h2>Despre noi</h2>
-                <p>Acest site a fost creat pentru a-i ajuta pe oameni să găsească mai ușor rețete bune atunci când nu știu ce să mai gătească.</p>
-                <p>Ideea proiectului este să aducem la un loc preparate simple și delicioase, pe care oricine le poate încerca acasă, folosind ingrediente obișnuite. Vrem ca gătitul să fie o plăcere și o activitate relaxantă, nu o coroadă.</p>
+                <h2>About us</h2>
+                <p>This site was created to help people easily find good recipes when they don't know what to cook next.</p>
+                <p>The idea of the project is to bring together simple and delicious dishes that anyone can try at home, using ordinary ingredients. We want cooking to be a pleasure and a relaxing activity, not a chore.</p>
             </div>
         </section>
 
-
+        <!-- Saved Recipes Page -->
         <section id="saved-page" class="page-section" style="display: none;">
             <div class="section-header-flex">
                 <div>
-                    <h2 class="section-title">Rețetele Tale Salvate</h2>
-                    <p class="section-subtitle">Colecția ta personală de preferate culinare.</p>
+                    <h2 class="section-title">Your Saved Recipes</h2>
+                    <p class="section-subtitle">Your personal collection of culinary favorites.</p>
                 </div>
             </div>
             <div id="saved-grid" class="recipes-grid">
-                <!-- Rețetele salvate -->
+                <!-- Saved recipes go here -->
             </div>
         </section>
     </main>
 
-
+    <!-- Recipe Modal -->
     <div id="recipe-modal" class="modal-overlay" style="display: none;">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">×</button>
